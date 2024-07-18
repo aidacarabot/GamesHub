@@ -1,0 +1,33 @@
+.mainTitle {
+  font-family: var(--gh-vintage-game);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--gh-font-color);
+  animation: changeColor 3s infinite;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--gh-margin-title);
+  text-align: center;
+}
+
+@keyframes changeColor {
+  0% { color: #FBF8CC; }
+  10% { color: #FDE4CF; }
+  20% { color: #FFCFD2; }
+  30% { color: #F1C0E8; }
+  40% { color: #CFBAF0; }
+  50% { color: #A3C4F3; }
+  60% { color: #90DBF4; }
+  70% { color: #8EECF5; }
+  80% { color: #98F5E1; }
+  90% { color: #B9FBC0; }
+  100% { color: #FBF8CC; }
+}
+
+@media (width < 770px) {
+  .mainTitle {
+    font-size: 1.4em;
+  }
+}

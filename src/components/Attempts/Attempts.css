@@ -1,0 +1,19 @@
+.attempts {
+  font-family: var(--gh-outfit-font);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5em;
+  display: flex;
+  gap: var(--gh-gap-s);
+  background: var(--gh-scoreColor);
+  padding: var(--gh-padding-s);
+  border-radius: var(--gh-radius-xs);
+  color: var(--gh-font-color);
+}
+
+@media (width < 770px) {
+  .buttonsDiv-ttt {
+    flex-direction: column;
+  }
+}

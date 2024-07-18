@@ -1,0 +1,116 @@
+body.rock-paper-scissors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.scoresDiv {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.rps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.rps-game-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gh-gap-l);
+  margin-top: var(--gh-margin-xl);
+  margin-bottom: var(--gh-margin-xl);
+  width: 100%;
+}
+
+.rps-button {
+  font-size: 3em;
+  cursor: pointer;
+  background: transparent;
+  border: 5px solid white;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: var(--gh-radius-circle);
+}
+
+.rps-button:hover {
+  background: var(--gh-font-color);
+}
+
+.rps-result {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-family: var(--gh-vintage-game);
+  color: var(--gh-font-color);
+  animation: changeColor 3s infinite;
+}
+
+@keyframes changeColor {
+  0% { color: #f72585; }    /* Rosa fuerte */
+  10% { color: #b5179e; }   /* Rosa medio */
+  20% { color: #7209b7; }   /* Púrpura fuerte */
+  30% { color: #560bad; }   /* Púrpura medio */
+  40% { color: #480ca8; }   /* Azul fuerte */
+  50% { color: #3a0ca3; }   /* Azul medio */
+  60% { color: #3f37c9; }   /* Azul claro */
+  70% { color: #4361ee; }   /* Azul más claro */
+  80% { color: #4895ef; }   /* Azul muy claro */
+  90% { color: #4cc9f0; }   /* Azul pastel */
+  100% { color: #f72585; }  /* Rosa fuerte */
+}
+
+.buttonsDiv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: var(--gh-margin-xl);
+  gap: var(--gh-gap-xl);
+}
+
+@media (width < 770px) {
+  body.rock-paper-scissors {
+    height: auto;
+    margin-top: var(--gh-margin-m);
+  }
+
+  .scoresDiv {
+    flex-direction: column;
+    width: auto;
+    gap: var(--gh-gap-m);
+  }
+
+  .scoresDiv > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rps-game-board {
+    flex-direction: column;
+  }
+
+  .rps-result {
+    font-size: 1em;
+  }
+
+  .buttonsDiv {
+    margin-top: var(--gh-margin-m);
+    flex-direction: column;
+    gap: var(--gh-gap-m);
+    margin-bottom: var(--gh-margin-l);
+    align-items: center;
+    justify-content: center;
+  }
+}

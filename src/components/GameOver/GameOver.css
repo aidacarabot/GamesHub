@@ -1,0 +1,37 @@
+@keyframes colorChange {
+  0% { color: #590d22; }
+  10% { color: #800f2f; }
+  20% { color: #a4133c; }
+  30% { color: #c9184a; }
+  40% { color: #ff4d6d; }
+  50% { color: #ff758f; }
+  60% { color: #ff8fa3; }
+  70% { color: #ffb3c1; }
+  80% { color: #ffccd5; }
+  90% { color: #fff0f3; }
+  100% { color: #590d22; }
+}
+
+.game-over-message {
+  font-family: var(--gh-vintage-game);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  font-size: 2em;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 10;
+  pointer-events: none; /* Allow clicks to pass through to underlying elements */
+  animation: colorChange 1s infinite; /* Añadir la animación de cambio de color */
+}
+
+@media (width < 770px) {
+  .game-over-message {
+    font-size: 1.5em;
+    width: 100%;
+  }
+}

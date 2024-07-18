@@ -1,0 +1,33 @@
+@keyframes colorChangeTied {
+  0% { color: #ffd6ff; }
+  20% { color: #e7c6ff; }
+  40% { color: #c8b6ff; }
+  60% { color: #b8c0ff; }
+  80% { color: #bbd0ff; }
+  100% { color: #ffd6ff; }
+}
+
+.tied-message {
+  font-family: var(--gh-vintage-game);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  font-size: 2em;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 10;
+  pointer-events: none; /* Allow clicks to pass through to underlying elements */
+  animation: colorChangeTied 1s infinite; /* Añadir la animación de cambio de color */
+}
+
+@media (width < 770px) {
+  .tied-message {
+    font-size: 1.5em;
+    width: 100%;
+  }
+}
+

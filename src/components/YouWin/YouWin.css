@@ -1,0 +1,37 @@
+@keyframes colorChangeYouWin {
+  0% { color: #10451d; }
+  10% { color: #155d27; }
+  20% { color: #1a7431; }
+  30% { color: #208b3a; }
+  40% { color: #25a244; }
+  50% { color: #2dc653; }
+  60% { color: #4ad66d; }
+  70% { color: #6ede8a; }
+  80% { color: #92e6a7; }
+  90% { color: #b7efc5; }
+  100% { color: #10451d; }
+}
+
+.you-win-message {
+  font-family: var(--gh-vintage-game);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  font-size: 2em;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 10;
+  pointer-events: none; /* Allow clicks to pass through to underlying elements */
+  animation: colorChangeYouWin 1s infinite; /* Añadir la animación de cambio de color */
+}
+
+@media (width < 770px) {
+  .you-win-message {
+    font-size: 1.5em;
+    width: 100%;
+  }
+}

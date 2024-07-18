@@ -1,0 +1,117 @@
+body.memory-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.mg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.scoreDiv-mg {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: var(--gh-margin-l);
+}
+
+.mg-stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.mg-game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: var(--gh-gap-l);
+  margin-bottom: 20px;
+}
+
+.mg-card {
+  width: 7em;
+  height: 7em;
+  cursor: pointer;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: var(--gh-radius-s);
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Suavizar el efecto de zoom-in */
+}
+
+.mg-card:not(.flip):not(.matched):hover {
+  transform: scale(1.1); /* Zoom-in al hacer hover si no está girada ni emparejada */
+}
+
+.mg-card.flip,
+.mg-card.matched {
+  transform: none; /* Evitar cualquier transformación aplicada */
+}
+
+.mg-card.flip {
+  transform: rotateY(180deg);
+}
+
+.mg-card.matched {
+  cursor: default;
+}
+
+.buttonsDiv-mg {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: var(--gh-margin-xl);
+  gap: var(--gh-gap-xl);
+}
+
+@media (max-width: 770px) {
+
+  body.memory-game {
+    height: auto;
+    margin: var(--gh-margin-m);
+  }
+
+  .scoreDiv-mg {
+    flex-direction: column;
+    width: auto;
+    gap: var(--gh-gap-m);
+  }
+
+  .scoreDiv-mg > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttonsDiv-mg {
+    margin-top: var(--gh-margin-m);
+    flex-direction: column;
+    gap: var(--gh-gap-m);
+    margin-bottom: var(--gh-margin-l);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mg-game-board {
+    grid-template-columns: repeat(4, 1fr); /* Mantener las 4 columnas */
+    grid-template-rows: repeat(3, 1fr); /* Mantener las 3 filas */
+    gap: var(--gh-gap-m);
+  }
+
+  .mg-card {
+    width: 4em; /* Reducir el tamaño de las cartas */
+    height: 5em; /* Reducir el tamaño de las cartas */
+  }
+}

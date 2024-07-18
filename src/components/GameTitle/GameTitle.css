@@ -1,0 +1,18 @@
+
+.gameTitle {
+  font-size: 2em;
+  margin-bottom: var(--gh-margin-title);
+  text-align: center;
+  font-family: var(--gh-vintage-game);
+  border: 10px solid white;
+  color: var(--gh-font-color);
+  padding: var(--gh-padding-l);
+}
+
+@media (width < 770px) {
+  .gameTitle {
+    padding: var(--gh-padding-m);
+    font-size: 1.5em;
+    border: 5px solid white;
+  }
+}

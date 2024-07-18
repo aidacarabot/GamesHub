@@ -1,0 +1,109 @@
+body.tic-tac-toe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.ttt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.scoresDiv-ttt {
+  margin-bottom: var(--gh-margin-l);
+  display: flex;
+  justify-content: center;
+}
+
+.playerP-ttt {
+  font-family: var(--gh-outfit-font);
+  color: var(--gh-font-color);
+  margin-bottom: var(--gh-margin-xl);
+  font-size: 1.2em;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  margin-bottom: var(--gh-margin-m);
+  font-family: var(--gh-vintage-game);
+  color: var(--gh-font-color);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  cursor: pointer;
+  border: 3px solid white;
+  transition: background-color 0.3s;
+  animation: borderColorChange 5s infinite;
+}
+
+.cell:nth-child(-n+3) { /* Borde superior para la primera fila */
+  border-top: none;
+}
+
+.cell:nth-last-child(-n+3) { /* Borde inferior para la última fila */
+  border-bottom: none;
+}
+
+.cell:nth-child(3n+1) { /* Borde izquierdo para la primera columna */
+  border-left: none;
+}
+
+.cell:nth-child(3n) { /* Borde derecho para la última columna */
+  border-right: none;
+}
+
+.buttonsDiv-ttt {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--gh-margin-xl);
+  gap: var(--gh-gap-xl);
+}
+
+@keyframes borderColorChange {
+  0% { border-color: #FFADAD; }
+  12.5% { border-color: #FFD6A5; }
+  25% { border-color: #FDFFB6; }
+  37.5% { border-color: #CAFFBF; }
+  50% { border-color: #9BF6FF; }
+  62.5% { border-color: #A0C4FF; }
+  75% { border-color: #BDB2FF; }
+  87.5% { border-color: #FFC6FF; }
+  100% { border-color: #FFFFFC; }
+}
+
+@media (width < 770px) {
+  .tic-tac-toe {
+    height: auto;
+    margin-top: var(--gh-margin-l);
+  }
+
+  .cell {
+    font-size: em;
+  }
+
+  .buttonsDiv-ttt {
+    margin-top: var(--gh-margin-m);
+    flex-direction: column;
+    gap: var(--gh-gap-m);
+    margin-bottom: var(--gh-margin-l);
+    align-items: center;
+    justify-content: center;
+  }
+}
