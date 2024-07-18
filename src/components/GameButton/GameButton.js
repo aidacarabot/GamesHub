@@ -9,7 +9,7 @@ export const createGameButton = (gameName, loadGame) => {
   // Crear el elemento de audio
   const audio = document.createElement('audio');
   audio.id = 'hover-sound';
-  audio.src = '../../../public/assets/glitch.mp3';
+  audio.src = 'assets/glitch.mp3';
   audio.preload = 'auto';
 
   // Añadir el evento de mouseenter para reproducir el sonido
